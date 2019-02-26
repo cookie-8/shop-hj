@@ -1,0 +1,214 @@
+.bodybox {
+    max-width: 950px;
+    width: 100%;
+    height: auto;
+    font-size: 22px;
+}
+
+.formbox {
+    width: 100%;
+    height: 450px;
+}
+
+input {
+    border: 2px solid black;
+    display: block;
+    width: 90%;
+    height: 60px;
+    font-size: 25px;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    font-size: 18px;
+}
+
+.btnAdd {
+    background-color: aqua;
+    color: black;
+}
+
+.btnReset {
+    background-color: red;
+    color: white;
+}
+
+.databox {
+    width: 100%;
+    height: auto;
+    min-height: 60px;
+}
+
+table {
+    width: 90%;
+    text-align: center;
+    border: 1.5px solid gray;
+    border-collapse: collapse;
+    position: relative;
+    left: 5%;
+}
+
+table td {
+    empty-cells: show;
+}
+
+.deletealltr {
+    text-align: right;
+}
+
+.deleteall {
+    background-color: red;
+    margin-right: 83px;
+    color: white;
+}
+
+.issurebox {
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    -webkit-animation: myfirst 1s;
+    /* Safari and Chrome */
+    animation: myfirst 1s;
+}
+
+@keyframes myfirst {
+    from {
+        position: absolute;
+        top: -500px;
+    }
+    to {
+        position: absolute;
+        top: 0;
+    }
+}
+
+@keyframes myfirst2 {
+    from {
+        position: absolute;
+        top: -50px;
+    }
+    to {
+        position: absolute;
+        top: 0;
+    }
+}
+
+.issure {
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    font-size: 28px;
+    -webkit-animation: myfirst2 1s;
+    /* Safari and Chrome */
+    animation: myfirst2 1s;
+}
+
+.btntrue {
+    background-color: red;
+    margin-right: 20px;
+}
+
+.cancelWinX {
+    position: absolute;
+    top: 0;
+    right: 50px;
+}
+
+.textGrowbox {
+    width: 100%;
+    height: 150px;
+    background-color: red;
+    margin-top: 50px;
+    border: 1px solid red;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.textleft {
+    width: 20%;
+    height: 100%;
+    margin-right: 10%;
+    border-right: 1px solid red;
+    text-align: center;
+    line-height: 150px;
+    font-size: 26px;
+    display: inline-block;
+    float: left;
+    color: white;
+}
+
+.textbox {
+    width: 70%;
+    height: 100%;
+    display: inline-block;
+    float: left;
+    position: relative;
+}
+
+.growbox {
+    width: 100%;
+    height: 35%;
+    border: 1px solid gray;
+    position: absolute;
+    right: -200px;
+    top: -100px;
+    background-color: white;
+    color: blue;
+    font-size: 24px;
+    border-radius: 10px;
+    line-height: 40%;
+    overflow: scroll;
+}
+
+.ul1 li {
+    list-style-type: none;
+    font-size: 26px;
+    height: 40px;
+    display: block;
+}
+
+.locatediv {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: aliceblue;
+    font-size: 26px;
+    z-index: 300;
+}
+
+.citydiv,
+.city_1box,
+.city_2box {
+    flex: 1;
+    height: auto;
+}
+
+.cityli {
+    display: block;
+    height: 50px;
+}
+
+.cityli:target {
+    font-size: 30px;
+    background-color: blue;
+    opacity: 0.8;
+}
+
+.city_1box,
+.city_2box {
+    border-left: 1px, solid;
+}

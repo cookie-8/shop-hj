@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.bodybox {
+    width: 100%;
+    height: 4362px;
+    background: linear-gradient(90deg, orange, white);
+    overflow-y: scroll;
+}
+
+.rightturn {
+    width: 500px;
+    height: 80px;
+    /* border: 1px red solid; */
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    /* border-radius: 10px; */
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(45deg, rgba(255, 210, 210, 0.5), white);
+}
+
+.sectionbox {
+    height: 800px;
+}
+
+.box01 {
+    height: 770px;
+    background: url("../images/jlws.png") no-repeat;
+    background-size: 100%, 100%;
+}
+
+.box02 {
+    height: 1005px;
+    background: url("../images/hyhd.png") no-repeat;
+    background-size: 100%, 100%;
+}
+
+.box03 {
+    height: 788px;
+    background: url("../images/lj.png") no-repeat;
+    background-size: 100%, 100%;
+}
+
+.contentbox {
+    height: 500px;
+    background: linear-gradient(90deg, #eb4633 0%, rgb(237, 90, 45) 52%, rgb(238, 109, 38) 100%);
+    position: relative;
+}
+
+.content {
+    width: 90%;
+    height: 90%;
+    position: relative;
+    margin: 0 auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: white;
+    border-radius: 25px;
+}
+
+.threebox {
+    height: 60%;
+    display: flex;
+}
+
+.leftbox,
+.centerbox,
+.rightbox {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.numbox {
+    flex: 1;
+    text-align: center;
+    font-size: 30px;
+}
+
+.btnbox {
+    width: 100%;
+    height: 30%;
+}
+
+.btn {
+    width: 60%;
+    height: 90px;
+    color: white;
+    background: linear-gradient(90deg, #eb4633 0%, rgb(237, 90, 45) 52%, rgb(238, 109, 38) 100%);
+    font-size: 45px;
+    position: relative;
+    margin: 0 auto;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.rulebox {
+    height: 1193px;
+    background: url("../images/rule01.png") no-repeat;
+    background-size: 100%, 100%;
+}
+
+.footer {
+    display: block;
+    height: 100px;
+    background: linear-gradient(90deg, #eb4633 0%, rgb(237, 90, 45) 52%, rgb(238, 109, 38) 100%);
+    font-size: 45px;
+}

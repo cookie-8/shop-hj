@@ -1,0 +1,79 @@
+<!-- 商城小app实现，加载信息和实现图片轮播，文字向上轮播 -->
+<div :class="css.shop">
+    <!-- 头部 -->
+    <header :class="css.header">首页</header>
+    <!-- 搜索框部分 -->
+    <div :class="css.search_box">
+        <span :class="css.span_input">
+                <input type="search" :class="css.search">
+                <input type="button" value="搜我" :class="css.search_btn">
+        </span>
+    </div>
+
+    <!-- 一排图标样式 -->
+    <div :class="css.tubiao_box">
+        <div :class="css.item_one">
+            <div :class="css.item_con">
+                <div :class="css.item_1"></div>
+            </div>
+
+            <div :class="css.item_con">
+                <div :class="css.item_2"></div>
+            </div>
+
+            <div :class="css.item_con">
+                <div :class="css.item_3"></div>
+            </div>
+            <div :class="css.item_con">
+                <div :class="css.item_5"></div>
+            </div>
+
+        </div>
+        <div :class="css.item_two">
+            <div :class="css.item_4">小贝</div>
+            <div :class="css.item_4">贝塔</div>
+            <div :class="css.item_4">机器猫</div>
+            <div :class="css.item_4">更多</div>
+
+        </div>
+
+
+    </div>
+    <!-- 小喇叭向上轮播 -->
+    <div :class="css.tern_box">
+        <div :class="css.left_icon"></div>
+        <div :class="css.small_icon"></div>
+        <div :class="css.right_icon" id="right_icon">
+            <ul id="turn_ul" :class="css.ul1">
+                <li v-for="i in myData">{{i.name}}</li>
+            </ul>
+            <ul id="turn_ul2" :class="css.ul1">
+
+            </ul>
+        </div>
+    </div>
+
+    <div :class="css.iamge_box">
+
+    </div>
+    <hr>
+    <!-- 下拉刷新 从服务器取数据展示 -->
+    <div :class="css.pulldown_box">
+        <div :class="css.pulldown_list" id="pulldown_list">
+            <ul v-for="item in list">
+                <li>{{item.login}}</li>
+            </ul>
+        </div>
+        <div class="css.pulldown_box_load">
+            <p :class="css.pulldown_box_p">点击加载更多...</p>
+        </div>
+    </div>
+
+    <div :class="css.bottom_box">
+        <span :class="css.bottom_box_span" @click="loadMore(number,cur)">-----人家是有底线的-----</span>
+    </div>
+    <!-- 底部导航栏 -->
+    <footer :class="css.footer_box">
+
+    </footer>
+</div>

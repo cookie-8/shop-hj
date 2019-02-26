@@ -1,0 +1,38 @@
+.listbox {
+    width: 98%;
+    height: auto;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    overflow: hidden;
+}
+
+.blockdiv {
+    width: 100%;
+    height: 30px;
+}
+
+.imgbox {
+    width: 60%;
+    height: 100px;
+    text-align: center;
+    padding-top: 30px;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, 20%);
+}
+
+.leftlist,
+.rightlist {
+    width: 40%;
+    margin-left: 40px;
+    word-wrap: break-word;
+}
+
+ul,
+li {
+    list-style-type: circle;
+}

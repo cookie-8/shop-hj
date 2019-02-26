@@ -1,0 +1,115 @@
+<!-- 添加删除数据事件，并实现轮播 -->
+<div :class="css.bodybox">
+    <!-- div form -->
+    <div>
+        <span @click="locateinite()">定位</span>
+    </div>
+    <div :class="css.formbox">
+        <form action="">
+            <h3>
+                <label for="username">用户名</label></h3><br>
+            <input type="text" id="username" placeholder="请输入你的名字" v-model="username"><br>
+            <h3>
+                <label for="userage">年龄</label></h3><br>
+            <input type="text" id="userage" placeholder="请输入你的年龄" v-model="userage"><br>
+
+            <button type="button" :class="css.btnAdd" @click="addInfo()">添加</button>
+            <button type="reset" :class="css.btnReset">重置</button>
+        </form>
+
+    </div>
+    <hr>
+
+    <!-- div data -->
+    <div :class="css.databox">
+        <table :class="css.tablebox" border="1.5px">
+            <caption>
+                <h2>用户信息表一览</h2>
+            </caption>
+            <tr>
+                <td>序号</td>
+                <td>用户名称</td>
+                <td>用户年龄</td>
+                <td>操作</td>
+            </tr>
+
+            <tr v-for="(info,index) in myData">
+                <td>{{index+1}}</td>
+                <td>{{info.name}}</td>
+                <td>{{info.age}}</td>
+                <td><button :class="css.btnDelete" @click="btndelete(index)">删除</button></td>
+            </tr>
+            <tr :class="css.deletealltr" v-show="myData.length!==0">
+                <td colspan="4">
+                    <button :class="css.deleteall" @click="deleteAll()">删除全部</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" v-show="myData.length===0">
+                    暂无数据......
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 文字向上或者向下按时轮播 -->
+    <div :class="css.textGrowbox">
+        <div :class="css.textleft"><span>展示信息</span></div>
+        <div :class="css.textbox">
+            <div :class="css.growbox" id="growbox">
+                <ul id="growboxul1" :class="css.ul1">
+                    <li v-for="i in myData">{{i.name}}</li>
+                </ul>
+
+                <ul id="growboxul2" :class="css.ul1">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 是否确定 -->
+    <div :class="css.issurebox" v-show="isshowback">
+    </div>
+    <div :class="css.issure" v-show="issure">
+        <p>{{issureMsg}}</p>
+        <span :class="css.cancelWinX" @click="cancelsure()">X</span>
+        <!-- 组件弹框信息 -->
+        <!-- <issure>
+            <p slot="delete" v-show="delete">确认删除么？</p>
+            <p slot="deleteall" v-show="deleteall">确认删除全部么？</p>
+            <p slot="successMsg" v-show="successMsg">删除成功！</p>
+        </issure> -->
+        <hr>
+        <div :class="css.btnbox">
+            <button :class="css.btntrue" @click="deletesure()">确定</button>
+            <button :class="css.btnfalse" @click="cancelsure()">取消</button>
+        </div>
+    </div>
+
+    <!-- 定位div -->
+    <!-- <locatediv :count='1'></locatediv> -->
+
+    <div :class="css.locatediv" v-show="isshowlocate">
+        <span :class="css.cancelWinX" @click="cancelsure()">X</span>
+        <div :class="css.citydiv">
+            <ul v-for="(city,index) in cities" :class="css.citybox">
+                <li :class="css.cityli">{{city}}</li>
+            </ul>
+        </div>
+
+        <div :class="css.city_1box">
+            <ul v-for="city1 in city_1" :class="css.citybox">
+                <li :class="css.cityli">{{city1}}</li>
+            </ul>
+        </div>
+
+        <div :class="css.city_2box">
+            <ul v-for="city2 in city_2" :class="css.citybox">
+                <li :class="css.cityli">{{city2}}</li>
+            </ul>
+        </div>
+    </div>
+
+
+</div>

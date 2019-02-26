@@ -1,0 +1,113 @@
+<!-- 商城首页 -->
+<div class="home_body">
+
+    <div :class="css.open_app" id="open_app">
+        <!-- 可关闭按钮 -->
+        <span :class="css.close_ui" @click="close_ui()" id="close_ui">x</span>
+        <div :class="css.line_1">点击左侧按钮可以关闭</div>
+        <div :class="css.line_2">月月商城APP欢迎您！</div>
+    </div>
+
+    <header :class="css.header" id="header">
+        <span :class="css.locate" @click="locateNowShow()">{{mylocate}}</span>
+    </header>
+
+    <!-- 图片轮播位置 -->
+    <div :class="css.ima_change">
+        <img :class="css.imgchange1" :src="now" alt="">
+    </div>
+
+    <!-- 按钮选项位置 -->
+    <div :class="css.items_box">
+        <div :class="css.item01">
+            <div :class="css.item02"></div>
+            <span>在线交易</span>
+        </div>
+        <div :class="css.item01">
+            <div :class="css.item02"></div>
+            <span>线上交易</span>
+        </div>
+        <div :class="css.item01">
+            <div :class="css.item02"></div>
+            <span>名牌汇</span>
+        </div>
+        <div :class="css.item01">
+            <div :class="css.item02"></div>
+            <span>售后保养</span>
+        </div>
+        <div :class="css.item01">
+            <div :class="css.item02"></div>
+            <span>你的喜欢</span>
+        </div>
+        <div :class="css.item01">
+            <div :class="css.item02"></div>
+            <span>啦啦啦啦啦</span>
+        </div>
+        <div :class="css.item01">
+            <div :class="css.item02"></div>
+            <span>嘻嘻😄</span>
+        </div>
+        <div :class="css.item01">
+            <div :class="css.item02"></div>
+            <span>啊哈哈</span>
+        </div>
+
+    </div>
+
+    <div :class="css.centernews">
+        <div :class="css.news_left">头条</div>
+
+        <div :class="css.news_right">条目一
+
+        </div>
+
+    </div>
+
+    <div :class="css.centernews_blank">
+
+    </div>
+
+    <div :class="css.newslist">
+
+    </div>
+
+
+
+
+    <!-- 定位页面 z-index=10 -->
+    <div id="locate_select" :class="css.locate_select" style="font-size: .035rem;">
+        <p>当前定位城市</p>
+        <div :class="css.locate_hot_item" id="locate_now">{{mylocate}}</div>
+        <p>热门城市</p>
+        <div :class="css.locate_hot">
+            <div :class="css.locate_hot_item" @click="locateNow('cq')">重庆</div>
+            <div :class="css.locate_hot_item" @click="locateNow('bj')">北京</div>
+            <div :class="css.locate_hot_item" @click="locateNow('sh')">上海</div>
+            <div :class="css.locate_hot_item" @click="locateNow('sz')">深圳</div>
+            <div :class="css.locate_hot_item" @click="locateNow('gd')">广东</div>
+            <div :class="css.locate_hot_item" @click="locateNow('cd')">成都</div>
+        </div>
+
+
+        <div :class="css.showABC">
+            <ul v-for="item in abcs">
+                <li>
+                    <p>{{item}}</p>
+                    <div :class="css.city_name">
+                        <ul v-for="city in cityNameCan">
+                            <li>
+                                <p style=" background-color: antiquewhite;" @onmouseenter="selectCityEnter()">
+                                    {{city}}
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+</div>

@@ -1,0 +1,229 @@
+.shop {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    overflow-y: scroll;
+}
+
+.header {
+    width: 100%;
+    height: .570rem;
+    line-height: .570rem;
+    padding-left: .26rem;
+    background-color: #FFB7DD;
+    font-size: .26rem;
+}
+
+.search_box {
+    width: 100%;
+    height: .86rem;
+    position: relative;
+    margin: auto;
+    left: 0;
+    right: 0;
+    line-height: .756rem;
+    vertical-align: center;
+    border: 1px solid #FFB7DD;
+}
+
+.span_input {
+    width: 5rem;
+    height: .5rem;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+}
+
+.search {
+    border-radius: 0.15rem;
+    width: 5rem;
+    height: .453rem;
+    position: absolute;
+    display: inline-block;
+    font-size: 30px;
+}
+
+.search_btn {
+    border-radius: 0.165rem;
+    width: .653rem;
+    height: .453rem;
+    background-color: #FFB7DD;
+    display: inline-block;
+    float: right;
+    margin-right: 0;
+    position: relative;
+}
+
+
+/* 小喇叭向上轮播 */
+
+.tern_box {
+    width: 100%;
+    height: .57rem;
+    border: 1px solid #FFB7DD;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.left_icon {
+    /* width: .67rem; */
+    flex-basis: .67rem;
+    height: 100%;
+    background: url('../images/圣诞老人.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+.small_icon {
+    flex-basis: .5rem;
+    height: 50%;
+    background: url('../images/公告.png') no-repeat;
+    background-size: 50% 100%;
+}
+
+.right_icon {
+    flex-basis: 100%;
+    height: 100%;
+    overflow: scroll;
+    font-size: 30px;
+}
+
+.ul1 li {
+    list-style-type: none;
+    height: 50px;
+    display: block;
+    margin-left: 20px;
+}
+
+.iamge_box {
+    width: 100%;
+    height: 3.5rem;
+    background-color: #FFB7DD;
+    background: url('../images/xuepin.jpg') no-repeat;
+    background-size: 100% 100%;
+    margin-top: .4rem;
+}
+
+hr {
+    border-style: 1px #FFB7DD solid;
+}
+
+.tubiao_box {
+    width: 100%;
+    height: 2.306rem;
+    border-radius: .396rem;
+    background-size: 100% 100%;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+}
+
+.item_one {
+    flex: 2;
+    display: flex;
+}
+
+.item_two {
+    flex: 1;
+    display: flex;
+}
+
+.item_4 {
+    flex: 1;
+    font-size: .24rem;
+    text-align: center;
+}
+
+.item_con {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .556rem;
+    /* border: 1px solid #FFB7DD; */
+}
+
+.item_1 {
+    width: .8rem;
+    height: .8rem;
+    background: url('../images/小贝.png') no-repeat;
+    background-size: 100% 100%;
+    background-size: contain;
+}
+
+.item_2 {
+    width: .8rem;
+    height: .8rem;
+    background: url('../images/贝塔.png') no-repeat;
+    background-size: 100% 100%;
+    background-size: contain;
+}
+
+.item_3 {
+    width: .8rem;
+    height: .8rem;
+    background: url('../images/机器猫.png') no-repeat;
+    background-size: 100% 100%;
+    background-size: contain;
+}
+
+.item_5 {
+    width: .8rem;
+    height: .8rem;
+    background: url('../images/更多.png') no-repeat;
+    background-size: 100% 100%;
+    background-size: contain;
+}
+
+
+/* 下拉刷新位置 */
+
+.pulldown_box {
+    height: 6.888rem;
+    margin-top: .131rem;
+    border: .013rem #FFB7DD solid;
+    border-radius: .396rem;
+    /* box-shadow: .02rem, .03rem, .02rem, .03rem; */
+}
+
+.pulldown_list {
+    width: 100%;
+    height: 6.337rem;
+    /* background-color: #FFB7DD; */
+    border: .013rem #FFB7DD solid;
+    border-radius: .396rem;
+    overflow-y: scroll;
+    font-size: .196rem;
+}
+
+.pulldown_box_load {
+    width: 100%;
+    height: .666rem;
+    text-align: center;
+}
+
+.pulldown_box_p,
+.bottom_box_span {
+    font-size: .196rem;
+    text-align: center;
+}
+
+.bottom_box {
+    width: 100%;
+    height: 1.006rem;
+    text-align: center;
+    line-height: 1.006rem;
+}
+
+.footer_box {
+    width: 100%;
+    height: .57rem;
+    background-color: #FFB7DD;
+    display: fixed;
+    bottom: 0;
+}

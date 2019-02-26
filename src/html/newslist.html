@@ -1,0 +1,46 @@
+<!-- 想做新闻首页，实现了图片轮播和一些信息展示而已 -->
+<div>
+    <!-- 动图展示 -->
+    <div :class="css.imgbox" id="imgbox">
+        <!-- <div :class="css.banner_slide_1" id="banner1"><img src="../images/bun1.jpg" alt="" /></div>
+        <div :class="css.banner_slide_2" id="banner2"><img src="../images/bun2.png" /></div>
+        <div :class="css.banner_slide_3" id="banner3"> <img src="../images/bun3.png" /></div> -->
+        <img :src="now" alt="">
+    </div>
+
+    <!-- 大标题 -->
+    <p :lanmu="lanmu">
+        <h3 v-if="lanmu='junshi' ">{{bigmsg[0]}}</h3>
+        <h3 v-else-if="lanmu='keji' ">{{bigmsg[1]}}</h3>
+        <h3 v-else-if="lanmu='fangchan'">{{bigmsg[2]}}</h3>
+        <h3 v-else-if="lanmu='qinggan' ">{{bigmsg[3]}}</h3>
+        <h3 v-else></h3>
+    </p>
+    <div :class="css.blockdiv "></div>
+
+    <!-- 新闻列表 -->
+    <div :class="css.listbox ">
+
+
+
+        <div :class="css.leftlist ">
+            <ul v-for="item in items1 ">
+                <li>
+                    <a href="# ">{{item.title}}</a>
+                </li>
+                <br>
+            </ul>
+        </div>
+
+        <div :class="css.rightlist ">
+            <ul v-for="item in items2 ">
+                <li>
+                    <a href="# ">{{item.title}}</a>
+                </li>
+                <br>
+            </ul>
+        </div>
+
+    </div>
+
+</div>

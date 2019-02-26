@@ -1,0 +1,184 @@
+.home_body {
+    padding: 0;
+    margin: 0;
+}
+
+.newslist {
+    font-size: .076rem;
+    height: 1rem;
+    overflow-y: scroll;
+}
+
+.centernews_blank {
+    height: .035rem;
+    border-top: 2px solid #f1f1f1;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.news_left {
+    width: 25%;
+    height: 100%;
+    border-right: 1px solid #f1f1f1;
+    float: left;
+    font-size: .076rem;
+    text-align: center;
+    line-height: .135rem;
+}
+
+.news_right {
+    width: 69%;
+    height: 100%;
+    border-left: 1px solid #f1f1f1;
+    float: right;
+    font-size: .046rem;
+    text-align: left;
+    line-height: .135rem;
+}
+
+.centernews {
+    height: .135rem;
+    border-top: 2px solid #f1f1f1;
+}
+
+.item02 {
+    width: 70%;
+    height: 70%;
+    background: url('@/images/bq.png') no-repeat;
+    background-size: contain;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.item01 {
+    width: 20%;
+    height: 40%;
+    margin-left: .041rem;
+    margin-top: .021rem;
+    /* background-color: aquamarine; */
+    text-align: center;
+}
+
+.items_box {
+    width: 100%;
+    height: 0.45rem;
+    font-size: .035rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imgchange1 {
+    width: 100%;
+    height: 100%;
+    background-position: 0 0;
+    background-size: 100% 100%;
+}
+
+.ima_change {
+    width: 100%;
+    height: 0.45rem;
+    background-color: grey;
+    opacity: 0.7;
+    font-size: .100rem;
+    text-align: center;
+}
+
+.line_2 {
+    height: 50%;
+    margin-left: .045rem;
+}
+
+.line_1 {
+    height: 30%;
+    font-size: .025rem;
+    margin-left: .045rem;
+}
+
+.close_ui {
+    font-size: .045rem;
+    position: absolute;
+    top: 0;
+}
+
+.open_app {
+    width: 100%;
+    height: .112rem;
+    background-color: bisque;
+    display: block;
+    font-size: .045rem;
+}
+
+.locate::after {
+    content: "";
+    width: .071rem;
+    height: .071rem;
+    border-top: 1px solid #999;
+    border-right: 1px solid #999;
+    border-top-color: green;
+    border-right-color: green;
+    right: -.3rem;
+    /* top: 50%;
+    -webkit-transform: rotate(135deg) translateY(100%);
+    transform: rotate(135deg) translateY(100%); */
+}
+
+.locate {
+    /* display: inline-block;
+    width: .1rem;
+    height: .1rem; */
+    padding-left: 0.020rem;
+}
+
+.header {
+    width: 100%;
+    height: .102rem;
+    border: 1px red;
+    font-size: .045rem;
+    line-height: .102rem;
+}
+
+
+/* 选择定位页面css */
+
+.showABC li p {
+    /* display: block; */
+    background-color: grey;
+    opacity: 0.8;
+    height: .08rem;
+    line-height: .08rem;
+    text-align: left;
+}
+
+.showABC {
+    overflow-y: scroll;
+    height: 2rem;
+    margin-top: .015rem;
+}
+
+.locate_hot_item {
+    width: 30%;
+    height: .1rem;
+    border: 1px gray solid;
+    border-radius: .015;
+    text-align: center;
+    line-height: .1rem;
+    margin-left: .015rem;
+    margin-top: .015rem;
+}
+
+.locate_now,
+.locate_hot {
+    height: .352rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.locate_select {
+    width: 100%;
+    height: 3rem;
+    background-color: antiquewhite;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    display: none;
+}
