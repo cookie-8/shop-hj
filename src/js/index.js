@@ -6,14 +6,14 @@ export default ({
     template: html,
     data() {
         return {
-            css: css,
-            count: 0,
+
         }
     },
+    created() {
+        this.css = css
+    },
     computed: {
-        count() {
-            return this.$store.state.count;
-        }
+
     },
     methods: {
         increate() {

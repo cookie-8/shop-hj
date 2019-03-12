@@ -55,21 +55,21 @@
     <!-- 文字向上或者向下按时轮播 -->
     <div :class="css.textGrowbox">
         <div :class="css.textleft"><span>展示信息</span></div>
-        <div :class="css.textbox">
-            <div :class="css.growbox" id="growbox">
-                <ul id="growboxul1" :class="css.ul1">
-                    <li v-for="i in myData">{{i.name}}</li>
-                </ul>
 
-                <ul id="growboxul2" :class="css.ul1">
+        <div :class="css.growbox" id="growbox">
+            <ul id="growboxul1" :class="css.ul1">
+                <li v-for="i in myData">{{i.name}}</li>
+            </ul>
 
-                </ul>
-            </div>
+            <ul id="growboxul2" :class="css.ul1">
+
+            </ul>
         </div>
+
     </div>
 
     <!-- 是否确定 -->
-    <div :class="css.issurebox" v-show="isshowback">
+    <div :class="css.issurebox" v-show="isshowback" id='issurebox'>
     </div>
     <div :class="css.issure" v-show="issure">
         <p>{{issureMsg}}</p>
@@ -91,6 +91,28 @@
     <!-- <locatediv :count='1'></locatediv> -->
 
     <div :class="css.locatediv" v-show="isshowlocate">
+        <span :class="css.cancelWinX" @click="cancelsure()">X</span>
+        <div :class="css.citydiv">
+            <ul v-for="(city,index) in cities" :class="css.citybox">
+                <li :class="css.cityli">{{city}}</li>
+            </ul>
+        </div>
+
+        <div :class="css.city_1box">
+            <ul v-for="city1 in city_1" :class="css.citybox">
+                <li :class="css.cityli">{{city1}}</li>
+            </ul>
+        </div>
+
+        <div :class="css.city_2box">
+            <ul v-for="city2 in city_2" :class="css.citybox">
+                <li :class="css.cityli">{{city2}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 实现 全屏遮罩 -->
+    <div :class="css.locatediv" v-show="isshowlocate" ref="mask">
         <span :class="css.cancelWinX" @click="cancelsure()">X</span>
         <div :class="css.citydiv">
             <ul v-for="(city,index) in cities" :class="css.citybox">

@@ -38,15 +38,10 @@ export default ({
         console.log(typeof this.ayyaym);
 
 
-        // this.$axios.get("https://api.github.com/users", {})
-        //     .then(res => {
-        //         console.log(res.data)
-        //         debugger
-        //     })
-
         this.myAjax().then(data => {
             console.log(data);
-            document.getElementById("pulldown_list").innerText = data.data;
+            this.list = data.data;
+
         }).catch(e => {
             console.log(e.message)
         })

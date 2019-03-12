@@ -39,6 +39,7 @@ export default {
         }
     },
     mounted() {
+        // this.$refs.mask.style.height = document.getElementById('app').clientHeight + 'px'
         this.growFunc();
         //this.addEvent();
 
@@ -50,18 +51,7 @@ export default {
 
     },
     methods: {
-        // addEvent: function() {
-        //     //debugger;
-        //     var li = document.getElementById("cityli");
-        //     li.addEventListener('mouseover', function() {
-        //         li.style.backgroundColor = "blue";
-        //         li.style.fontSize = '30px';
-        //     })
-        //     li.addEventListener('mouseout', function() {
-        //         li.style.backgroundColor = "aliceblue";
-        //         li.style.fontSize = '26px';
-        //     })
-        // },
+
 
         growFunc: function() {
             var box = document.getElementById("growbox");
