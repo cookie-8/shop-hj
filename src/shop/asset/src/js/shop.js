@@ -10,9 +10,12 @@ export default ({
     data() {
         return {
             css: css,
-            list: [],
-            cur: 0,
-            num: 0,
+            data_list: [],
+            data_sy: [],
+            current_num: 0,
+            data_list_length: 1,
+            arr: [],
+            num: 20, //每次取数据20条
             myData: [
                 { name: '恭喜美玲获得234元代金券', age: 19 },
                 { name: '恭喜小虎获得100元电话加油卡', age: 23 },
@@ -34,13 +37,28 @@ export default ({
         document.documentElement.style.fontSize = clientFont_w + 'px';
         console.log(clientWidth + " / " + " / " + clientFont_w);
 
-        console.log(this.ayyaym);
-        console.log(typeof this.ayyaym);
-
-
-        this.myAjax().then(data => {
-            console.log(data);
-            this.list = data.data;
+        this.myAjax().then(res => {
+            console.log(res.data);
+            if (localStorage) {
+                localStorage.setItem('data_list', res.data)
+                console.log(localStorage.getItem('data_list'))
+            }
+            this.arr = res.data; //取到的所有数据
+            this.data_sy = this.arr.slice(this.current_num); //取出20后的剩余数据
+            this.data_list_length = res.data.length;
+            var obj = {}
+            this.data_sy.forEach((element, i) => {
+                if (i < this.num) {
+                    obj.id = element
+                    console.log(obj)
+                        //debugger;
+                    if (obj) {
+                        this.data_list.push(obj)
+                    }
+                    obj = {}
+                }
+            });
+            this.current_num += this.num;
 
         }).catch(e => {
             console.log(e.message)
@@ -53,6 +71,27 @@ export default ({
         this.truenFunc();
     },
     methods: {
+        loadMore() {
+            //debugger
+            this.data_sy = this.arr.slice(this.current_num); //取出20后的剩余数据
+            if (this.data_sy.length > 0) {
+                var obj = {}
+                this.data_sy.forEach((element, i) => {
+                    if (i < this.num) {
+                        obj.id = element
+                        if (obj) {
+                            this.data_list.push(obj)
+                        }
+                        obj = {}
+                    }
+                });
+                this.current_num += this.num;
+            } else {
+                this.current_num = this.data_list_length;
+            }
+            console.log(this.current_num);
+        },
+
         truenFunc: function() {
             var icon = document.getElementById("right_icon");
             var ul = document.getElementById("turn_ul");
@@ -71,9 +110,6 @@ export default ({
             var mytimer = setInterval(scrollUp, time);
         },
 
-        loadMore(number, cur) {
-            console.log(number + "/" + cur)
-        },
         async myAjax() {
             let res = [];
 

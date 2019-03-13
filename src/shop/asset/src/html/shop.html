@@ -59,21 +59,20 @@
     <hr>
     <!-- 下拉刷新 从服务器取数据展示 -->
     <div :class="css.pulldown_box">
-        <div :class="css.pulldown_list" id="pulldown_list">
-            <ul v-for="item in list">
-                <li>{{item.login}}</li>
-            </ul>
-        </div>
-        <div class="css.pulldown_box_load">
-            <p :class="css.pulldown_box_p">点击加载更多...</p>
-        </div>
+        <ul>
+            <li v-for="(item,index) in data_list">
+                <span>{{index}}</span>
+                <span>---</span>
+                <span>{{item.id}}</span>
+            </li>
+        </ul>
+        <p :class="css.bottom_box_span" v-if="current_num >= data_list_length">...到底啦...</p>
+        <p :class="css.pulldown_box_p" @click="loadMore()" v-else>点击加载更多...</p>
     </div>
 
-    <div :class="css.bottom_box">
-        <span :class="css.bottom_box_span" @click="loadMore(number,cur)">-----人家是有底线的-----</span>
-    </div>
+
     <!-- 底部导航栏 -->
-    <footer :class="css.footer_box">
+    <footer :class="css.footer_box ">
 
     </footer>
 </div>

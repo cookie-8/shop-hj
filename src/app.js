@@ -4,7 +4,7 @@ import Index from './js/index'
 import axios from 'axios'
 import store from './store'
 import routes from './routes'
-
+import iview from 'iview'
 
 
 
@@ -13,6 +13,7 @@ Vue.prototype.$axios = axios
 Vue.config.productionTip = false
 
 Vue.use(Vuerouter)
+Vue.use(iview)
 
 const router = new Vuerouter({
     routes
